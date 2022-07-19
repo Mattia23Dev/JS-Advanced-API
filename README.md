@@ -1,21 +1,14 @@
-# 🚀 Welcome to your new awesome project!
-
-# Best Cities To Live :house_with_garden:
-With this simple page, you can search for a city, in a database that includes the best cities in the world, to evaluate its characteristics and choose your next place where you are going to live.
-
-## :question: Why
-This project is the final practice for start2impact Javascript Advanced course.<br>
-Created in the early 2022, this is my second JS project.
+# 🚀 Tech News !
 
 ## :bulb: How it works
-Start writing the city you are looking for in the main search bar and check the cities available in the suggestions.
+After opening it the site will make asynchronous calls to the external hacker-news API
 
-<img src="https://user-images.githubusercontent.com/82518387/165903289-7a45d4e9-f3ed-4e48-8c53-c3b026b91211.png" width="50%" height="50%">
+<img src="C:\Users\matti\Downloads\Immagine 2022-07-19 183748.png" width="50%" height="50%">
 
-Once selected you can start the search and you will see a photo, description and scores of the searched city in a simple nice graph. <br>
-If you want to compare the scores with those of another city, you can select one to add to the graph and make your comparison.
 
-<img src="https://user-images.githubusercontent.com/82518387/165903391-7d7bd50b-1876-420d-92e0-4db8fb48cb91.png" width="50%" height="50%">
+At the click of the button it will load other news
+
+<img src="C:\Users\matti\Downloads\Immagine 2022-07-19 183836.png" width="50%" height="50%">
 
 ## :computer: Languages
 * HTML5
@@ -25,22 +18,28 @@ If you want to compare the scores with those of another city, you can select one
 ## :books: Libraries
 * [Get from _Lodash](https://lodash.com/docs/4.17.15#get)
 * [Axios](https://axios-http.com/)
-* [Chart.js](https://www.chartjs.org/)
+* [Style-loader](https://axios-http.com/)
+* [css-loader](https://axios-http.com/)
+* [gh-pages](https://axios-http.com/)
+* [sass](https://axios-http.com/)
+
 
 ## :package: Bundler
 * [Webpack 5](https://webpack.js.org/)
+* [Webpack-cli](https://webpack.js.org/)
+* [Webpack-dev-server](https://webpack.js.org/)
+* [html-webpack-plugin](https://webpack.js.org/)
 
 ## :globe_with_meridians: External Services
-* [Teleport Cities API](https://developers.teleport.org/api/)
+* [Hacker-news API](https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty)
+will give you 500 ID,<br> after that you will have to make another external call for each ID
 
 ## :floppy_disk: Installation
 First of all, you need Node.js installed.
-If you don't have it, you can download it here:
-[Node.js](https://nodejs.org/it/download/)<br>
 After the installation, you're ready to go.
 
 ### 1 - Clone the repository
-`git clone https://github.com/cristopherturazza/S2I-JS-Advanced`
+`git clone https://github.com/Mattia23Dev/JS-Advanced-API.git`
 ### 2 - Install the dependencies
 `npm install`
 ### 3 - Build it!
@@ -52,11 +51,9 @@ Check out for index.html in the /dist folder.
 
 ## :zap:  Try it!
 Elsewhere, you can simply try it here:
-[Best Cities To Live](https://bestcitiestolive.netlify.app/)
-## :page_with_curl:  License
-[MIT](https://choosealicense.com/licenses/mit/)
+[Tech News Worldwide](https://bestcitiestolive.netlify.app/)
 
 ## :e-mail: Contact Me
-Any questions? Send me an e-mail here: cristopherturazza@gmail.com <br>
-You can find my Linkedin profile here: https://www.linkedin.com/in/cristopher-turazza-0863a026/
+Any questions? Send me an e-mail here: mattianoris23@gmail.com <br>
+You can find my Linkedin profile here: https://www.linkedin.com/in/mattia-noris-87ab11232/
 
