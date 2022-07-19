@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Righteous&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    box-shadow: 0 0 10px 2px #4b01ac ;
+}
+::-webkit-scrollbar-thumb {
+    background: #4b01ac ;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+h1 {
+  width: 100%;
+  height: auto;
+  font-size: calc(1.6rem + 3vh);
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  margin-bottom: 1vh;
+  color: white;
+  position: relative;
+  font-family: 'Righteous';
+  text-shadow: 7px 7px 7px #4b01ac ;
+}
+
+p{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.p{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: 'Baumans';
+    text-shadow: 7px 7px 7px #4b01ac ;
+}
+h6{
+    color: white;
+    position: fixed;
+    left: 1%;
+    top:2%;
+    font-size: 16px;
+    text-shadow: 4px 4px 4px #4b01ac ;
+    font-family: 'Baumans';
+}
+.container {
+  min-height: 1200px;
+  width: 90%;
+  padding: 30px 0 30px 0;
+  margin: auto;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.news {
+  color: black;
+  font-size: 20px;
+  width: 40%;
+  height: 200px;
+  font-size: 18px;
+  overflow: hidden;
+  padding: 15px;
+  margin:30px auto;
+  border: 3px solid black;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 10px 3px #4b01ac ;
+  animation: fade-in 1s;
+  backdrop-filter: blur(20px);
+  font-family: 'Baumans';
+}
+.news:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.35s;
+}
+
+a:hover {
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626,
+    0 6px 0 #1d1d1d, 0 7px 0 #171717;
+    transition: 0.5s;
+}
+
+span {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.news-by {
+  left: 16px; 
+  bottom: 12px;
+  position: absolute;
+}
+
+.news-time {
+  right: 20px;
+  bottom: 12px;
+  position: absolute;
+}
+
+.container-btn {
+  text-align: center;
+}
+
+button {
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-size: 20px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: color 200ms ease-out, box-shadow 150ms ease-out, transform 200ms ease-out;
+    box-shadow: -1px 1px white, -2px 2px white, -3px 3px white, -4px 4px white;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 15px 0;
+    margin-bottom: 80px;
+    width: 20%;
+    font-family: 'Righteous', cursive;
+    border: 2px solid #4b01ac ;
+    cursor: pointer;
+}
+button:hover, button:focus {
+    color: rgb(0, 0, 0);
+    box-shadow: -1px 1px white, -2px 2px white, -3px 3px white, -4px 4px white, -5px 5px white, -6px 6px white, -7px 7px white, -8px 8px white;
+    transform: translatey(-8px);
+  }
+  button:active {
+    box-shadow: -1px 1px 0 0 currentcolor;
+    transform: translatey(0px);
+  }
+
+@media only screen and (max-width: 980px) {
+  .container {
+    width: 80%;
+  }
+  button{
+    width: 40%;
+}
+  .news {
+    width: 40%;
+  }
+}
+
+.github {
+  right: 75px;
+}
+
+@media only screen and (max-width: 630px) {
+  .news {
+    width: 95%;
+    height: 150px;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .news-by {
+    left: 10px;
+  }
+button{
+    width: 60%;
+}
+  .news-time {
+    right: 10px;
+  }
+}
+
+.err{
+  width: 80%;
+  min-height: 50px;
+  background-color:  #700505;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 7px;
+  border: red 2px solid;
+  color: white;
+}
