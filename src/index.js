@@ -2,7 +2,7 @@ import "./style.css";
 import axios from "axios";
 import _ from "lodash";
 
-let box = document.querySelector(".container");
+let container = document.querySelector(".container");
 let load = document.getElementById("btn");
 
 showNews();
@@ -23,7 +23,8 @@ function createElement(array, index) {
     axios.get(`https://hacker-news.firebaseio.com/v0/item/${item}.json`)))
     .then(( res => { 
       res.forEach(news => {
-        box.insertAdjacentHTML("beforeend",
+        container.insertAdjacentHTML("beforeend",
+
                                `<div class ="news">
                                   <p>Title:</p><br>
                                   <a href = ${_.get(news, "data.url", location.href)} target =_blanck>
@@ -39,7 +40,8 @@ function createElement(array, index) {
         );
       });     
     })).catch(error => {
-         box.insertAdjacentHTML("beforeend",
+         container.insertAdjacentHTML("beforeend",
+         
                                 `<div class="err">
                                    Sorry an error was detected.<br>  
                                    <span>${error}</span>
