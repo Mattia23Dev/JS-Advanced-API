@@ -3,12 +3,12 @@
 ## :bulb: How it works
 After opening it the site will make asynchronous calls to the external hacker-news API
 
-<img src="https://github.com/Mattia23Dev/JS-Advanced-API/blob/main/Immagine%202022-07-19%20183748.png" width="50%" height="50%">
+<img src="https://github.com/Mattia23Dev/JS-Advanced-API/blob/main/Immagine%202022-07-19%20183748.png" width="65%" height="60%">
 
 
 At the click of the button it will load other news
 
-<img src="https://github.com/Mattia23Dev/JS-Advanced-API/blob/main/Immagine%202022-07-19%20183836.png" width="50%" height="50%">
+<img src="https://github.com/Mattia23Dev/JS-Advanced-API/blob/main/Immagine%202022-07-19%20183836.png" width="65%" height="60%">
 
 ## :computer: Languages
 * HTML5
