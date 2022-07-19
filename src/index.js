@@ -41,9 +41,9 @@ function createElement(array, index) {
       });     
     })).catch(error => {
          container.insertAdjacentHTML("beforeend",
-         
+
                                 `<div class="err">
-                                   Sorry an error was detected.<br>  
+                                   Sorry there was an error.<br>  
                                    <span>${error}</span>
                                  </div>`   
          );
