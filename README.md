@@ -18,17 +18,17 @@ At the click of the button it will load other news <br><br>
 ## :books: Libraries
 * [Get from _Lodash](https://lodash.com/docs/4.17.15#get)
 * [Axios](https://axios-http.com/)
-* [Style-loader](https://axios-http.com/)
-* [css-loader](https://axios-http.com/)
-* [gh-pages](https://axios-http.com/)
-* [sass](https://axios-http.com/)
+* [Style-loader](https://www.npmjs.com/package/style-loader)
+* [css-loader](https://www.npmjs.com/package/css-loader)
+* [gh-pages](https://www.npmjs.com/package/gh-pages)
+* [sass , optional](https://www.npmjs.com/package/sass)
 
 
 ## :package: Bundler
 * [Webpack 5](https://webpack.js.org/)
-* [Webpack-cli](https://webpack.js.org/)
-* [Webpack-dev-server](https://webpack.js.org/)
-* [html-webpack-plugin](https://webpack.js.org/)
+* [Webpack-cli](https://www.npmjs.com/package/webpack-cli)
+* [Webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
+* [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
 
 ## :globe_with_meridians: External Services
 * [Hacker-news API](https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty)
