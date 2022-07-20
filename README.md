@@ -51,7 +51,7 @@ Check out for index.html in the /dist folder.
 
 ## :zap:  Try it!
 Elsewhere, you can simply try it here:
-[Tech News Worldwide](https://github.com/Mattia23Dev/JS-Advanced-API/blob/main/dist/index.html)
+[Tech News Worldwide](https://tech-news-worldwide.netlify.app/)
 
 ## :e-mail: Contact Me
 Any questions? Send me an e-mail here: mattianoris23@gmail.com <br>
