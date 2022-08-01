@@ -1,9 +1,10 @@
 import "./style.css";
 import axios from "axios";
-import _ from "lodash";
+import get from "lodash";
 
 let container = document.querySelector(".container");
 let load = document.getElementById("btn");
+let finallyLoading = document.getElementById('finally');
 
 showNews();
 
@@ -21,34 +22,45 @@ async function showNews() {
 function createElement(array, index) {
   Promise.all(array.slice(index, index + 10).map((item) => 
     axios.get(`https://hacker-news.firebaseio.com/v0/item/${item}.json`)))
-    .then(( res => { 
-      res.forEach(news => {
-        container.insertAdjacentHTML("beforeend",
+    .then(( res => renderArticleHTML(res)))
 
-                               `<div class ="news">
-                                  <p>Title:</p><br>
-                                  <a href = ${_.get(news, "data.url", location.href)} target =_blanck>
-                                    ${_.get(news, "data.title", "title")} 
-                                  </a>
-                                  <span class = "news-by">
-                                    Author: ${_.get(news, "data.by", "author")} 
-                                  </span>
-                                  <span class = "news-time">
-                                    ${timeDifference(Date.now(), news.data.time * 1000)} ago
-                                  </span> 
-                                <div>`
-        );
-      });     
-    })).catch(error => {
-         container.insertAdjacentHTML("beforeend",
-
-                                `<div class="err">
-                                   Sorry there was an error.<br>  
-                                   <span>${error}</span>
-                                 </div>`   
-         );
+    .catch(error => renderErrorHTML(error))
+    
+    .finally(() => {
+         finallyLoading.insertAdjacentHTML("beforeend",
+                                            '<br><br> <h5>Loading Successful</h5>')
        });       
-}      
+}  
+
+function renderArticleHTML(res){
+    res.forEach(news => {
+      container.insertAdjacentHTML("beforeend",
+
+                             `<div class ="news">
+                                <p>Title:</p><br>
+                                <a href = ${_.get(news, "data.url", location.href)} target =_blanck>
+                                  ${_.get(news, "data.title", "title")} 
+                                </a>
+                                <span class = "news-by">
+                                  Author: ${_.get(news, "data.by", "author")} 
+                                </span>
+                                <span class = "news-time">
+                                  ${timeDifference(Date.now(), news.data.time * 1000)} ago
+                                </span> 
+                              <div>`
+      );
+    });     
+};
+
+function renderErrorHTML(error){
+  container.insertAdjacentHTML("beforeend",
+
+                         `<div class="err">
+                            Sorry there was an error.<br>  
+                            <span>${error}</span>
+                          </div>`   
+  )};
+
 
 function timeDifference(timeNow, timeNews) {
   let minute = 60 * 1000;
