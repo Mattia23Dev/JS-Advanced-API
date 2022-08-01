@@ -11,15 +11,15 @@ showNews();
 async function showNews() {
   let newsItem = await axios.get("https://hacker-news.firebaseio.com/v0/newstories.json");
   let newsId = 0;
-  createElement(newsItem.data, newsId);
+  getDataArticle(newsItem.data, newsId);
 
   load.addEventListener("click", function () {
     newsId += 10;
-    createElement(newsItem.data, newsId); 
+    getDataArticle(newsItem.data, newsId); 
   });
 }
 
-function createElement(array, index) {
+function getDataArticle(array, index) {
   Promise.all(array.slice(index, index + 10).map((item) => 
     axios.get(`https://hacker-news.firebaseio.com/v0/item/${item}.json`)))
     .then(( res => renderArticleHTML(res)))
